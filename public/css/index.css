@@ -5,3 +5,7 @@ html {
 body {
   background: #fff;
 }
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
