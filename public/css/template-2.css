@@ -15,6 +15,8 @@ body {
 
   border-bottom: 1px solid #6C757D;
 
+  display: flex;
+  justify-content: space-between;
 }
 .logo {
   font-size: 17px;
@@ -64,6 +66,9 @@ text-decoration: none;
 
   border-top: 1px solid #6C757D;
 
+  display: flex;
+  justify-content: space-between;
+
  }
  
  .footer_copyright {
@@ -95,6 +100,8 @@ text-decoration: none;
   color: #ffffff;
   font-size: 20px;
   max-width: 585;
+
+ 
  }
 
  .page_block:not(:last-child) {
@@ -157,6 +164,13 @@ text-decoration: none;
   background: #343A40;
   border-radius: 24px;
   padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  
  }
 
  .botton {
@@ -242,6 +256,9 @@ text-decoration: none;
   padding-bottom: 12px;
   border-bottom: 1px solid  #DEE2E6;
   margin-bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
 
  }
  
