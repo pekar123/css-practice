@@ -148,25 +148,22 @@ line-height: 100%;
 .hero_title {
   font-size: 36px;
   font-weight: var(--wight-title);
-  color: var(--color-title) ;
+  color: var(--color-title);
   line-height: 120%;
-  
   
 }
 
 .hero_text {
-  font-size: var(--size-l) ;
-  color: var(--color-text) ;
+  font-size: var(--size-l);
+  color: var(--color-text);
   font-weight: var(--wight-text);
-  line-height: 170%
+  line-height: 170%;
 }
 
 .featured {
   display: flex;
-  
   gap:var(--space-b);
   
-
   padding: var(--space-b);
   border-bottom: 1px solid var(--color-border);
 }
