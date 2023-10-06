@@ -1,0 +1,405 @@
+:root {
+  --space-s: 10px;
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-d: 16px;
+  
+  --size-l: 20px;
+
+  --color-border: #6C757D;
+  --color-primary: rgb(25, 75, 241);
+  --color-white: #ffffff;
+  --color-title: #212529;
+  --color-text: #343A40;
+  --color-background:#F8F9FA;
+
+  --border-radius-s: 4px; 
+  --border-radius: 12px;
+
+  --wight-title: 700;
+  --wight-text: 500;
+
+}
+
+
+/* ======================= */
+.page {
+  background: var(--color-corder);
+  padding: 0 13px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  max-width: 1000px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+}
+/* ===================== */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 17px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  width: 24px;
+  height: 24px;
+  border-radius: calc(var(--border-radius)/2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_inline {
+  gap:var(--space-xm);
+}
+
+.nav_vertical{
+  gap:var(--space-m);
+  flex-direction: column;
+}
+
+.nav_link {
+color: var(--color-text) ;
+font-size: var(--size-d);
+text-decoration: none;
+line-height: 100%;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: rgba(75, 122, 160, 0.753);
+}
+
+
+.footer {
+  padding: var(--space-l) 0;
+
+  border-top: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer_copyright {
+  font-size: var(--size-s);
+  color: var(--color-text);
+
+  display: block;
+  margin-top: var(--space-l);
+}
+
+.footer_title {
+  font-size: var(--size-l);
+  color: var(--color-title);
+
+  display: block;
+  margin-bottom: var(--space-l);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-l);
+  
+}
+
+.main_info {
+  max-width: 582px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  
+}
+
+.main_info_title {
+  font-size: 56px;
+  font-weight: var( --wight-title );
+  color: #212529;
+  
+}
+
+.main_info_text {
+  font-size: 24px;
+  font-weight: var( --wight-text );;
+  color: #212529;
+  
+}
+
+.form {
+  width: 394px;
+  display: flex;
+  padding: 60px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  
+  border-radius: var( --border-radius-s );
+  border: 1px solid #DEE2E6;
+  background: var(--color-background);;
+}
+
+.form_input_list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  
+}
+
+.form_input_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-s);
+  
+  width: 298px;
+
+  padding: 16px 12px;
+  border-radius: var( --border-radius-s );
+  border: 1px solid #CED4DA;
+  background: #FFF;
+}
+
+.form_input_item::placeholder {
+  font-size: var(--size-s);
+  color: #212529;
+  
+}
+
+.form_button {
+  display: flex;
+  max-width: 298px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 12px ;
+  
+  border-radius: var( --border-radius-s );
+  background-color: #0D6EFD;
+  color: var(--color-white);
+
+  transition: opacity 0.7s;
+
+}
+.form_button:hover {
+  opacity: 0.7;
+}
+
+.form_button:active {
+  opacity: 0.3;
+}
+
+.form_border {
+  height: 1px;
+  align-self: stretch;
+
+  opacity: 0.25;
+  background: #212529;
+}
+
+.form_info {
+  width: 308px;
+  color: #6C757D;
+  font-size: var(--size-s);
+  font-weight: var( --wight-text );;
+  letter-spacing: 0;
+  line-height: 100%;
+}
+
+.updates {
+  display: flex;
+  
+  flex-direction: column;
+  gap: var(--space-l);
+  align-items: flex-start;
+  padding: var(--space-l);
+  
+  border-radius: var( --border-radius-s );
+  background: var(--color-white)
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+}
+
+.updates_title {
+  color: #212529;
+  font-size: 24px;
+  font-weight: var( --wight-text );;
+  
+  padding-bottom: 12px;
+  align-self: stretch;
+  
+  border-bottom: 1px solid #DEE2E6;
+  
+}
+
+.list_updates {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  
+  
+}
+
+.icon_item {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #0D6EFD;
+}
+
+.list_name {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 912px;
+  
+  padding-bottom: 12px;
+  border-bottom: 1px solid #D3DEE9;
+}
+
+.nike_name {
+  color: #6C757D;
+  font-size: var(--size-s);
+  font-weight: var( --wight-title );
+  width: 74px;
+  height: 15px;
+
+}
+
+.description {
+  color: #6C757D;
+  font-size: var(--size-d);
+  font-weight: var( --wight-text );;
+  align-self: stretch;
+  
+}
+
+.list_show_all_item {
+  text-align: right;
+  font-size: var(--size-s);
+  font-weight: var( --wight-text );;
+  color: #0D6EFD;
+
+}
+
+ .list_show_all_item:hover {
+  opacity: 0.8;
+}
+
+.expirience {
+  max-width: 1000px;
+  width: 100%;
+ 
+
+  display: flex;
+  flex-direction: column;
+ 
+  
+  padding: var(--space-l) 28px;
+  gap: var(--space-l);
+  
+  border-radius: var( --border-radius-s );
+  background: var(--color-background);;
+ 
+ 
+  
+}
+
+.expirience_form_title {
+  
+  display: flex;
+  align-items: flex-end;
+  align-self: stretch;
+  
+}
+
+.expirionce_title {
+  color: #212529;
+  font-size: 42px;
+  font-weight: var( --wight-title );
+  
+}
+
+
+.expirionce_badge_item {
+  position: relative;
+  bottom:40px;
+  left: 400px;
+
+  transform: rotate(30deg);
+  padding: var(--space-m) var(--space-l);
+  
+  font-size: 24px;
+  font-weight: var( --wight-title );
+  
+  color: var(--color-white);
+  border-radius: 70px;
+  background: #FF7347;
+}
+
+.espirionce_list {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-l);
+
+}
+
+.espirionce_border_list {
+display: flex;
+padding: 16px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+flex: 1 0 0;
+align-self: stretch;
+
+border-radius: var(--border-radius);
+background: #212529;
+color: var(--color-white);
+
+}
+
+.espirionce_name {
+  color: var(--color-white);
+  font-size: var(--size-l);
+  font-weight: var( --wight-title );
+  
+}
+
+.espirionce_details {
+  color: #B1B1B1;
+  font-size: var(--size-d);
+  
+  font-weight: var( --wight-text );;
+  line-height: 22px;
+  
+  
+}
