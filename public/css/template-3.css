@@ -1,26 +1,32 @@
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
+@import url(/css/var.css);
 
-  --size-s: 14px;
-  --size-d: 16px;
-  
-  --size-l: 20px;
-
-  --color-border: #6C757D;
-  --color-primary: rgb(25, 75, 241);
-  --color-white: #ffffff;
-  --color-title: #212529;
-  --color-text: #343A40;
-
-  --border-radius: 12px;
-
-  --wight-title: 500;
-  --wight-text: 500;
-
+@font-face {
+  font-family: Segment;
+  src: url(/font/Segment-Regular.otf);
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: Segment;
+  src: url(/font/Segment-SemiBold.otf);
+  font-weight: 600;
+}
+
+@layer normalize, main, component, form, style;
+
+@layer main {
+  .form_button {
+    background-color: red;
+  }
+}
+
+@layer style {
+  .card_button {
+    background-color: green;
+  }
+}
+
+
 
 
 /* ======================= */
@@ -131,8 +137,11 @@ line-height: 100%;
 }
 
 .hero_img {
-  width: 500px;
-  height: 500px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  padding: auto;
 
   border-radius: var(--border-radius);
 }
@@ -157,8 +166,19 @@ line-height: 100%;
   line-height: 170%
 }
 
+/* .form_button_green {
+  background-color: green;
+  width: 50%;
+  text-align: center;
+  color: white;
+} */
+
 .blog {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  
+  
   gap:var(--space-b);
 
   padding: var(--space-b);
@@ -171,6 +191,10 @@ line-height: 100%;
  align-items: center;
  text-align: center;
  gap: var(--space-l);
+ background-color: #5f94c2;
+ padding: 20px;
+ border: 3px solid red;
+ 
 }
 
 .card_image {
@@ -192,31 +216,36 @@ line-height: 100%;
  color: var(--color-text);
 }
 
-.button {
-  display: inline-block;
-  font-size: var(--size-d);
-  text-decoration: none;
+@layer main {
+  .button {
+    display: inline-block;
+    font-size: var(--size-d);
+    text-decoration: none;
+  
+    padding: var(--space-m) var(--space-xm);
+  
+    border-radius: var(--border-radius);
+  }
+  
 
-  padding: var(--space-m) var(--space-xm);
-
-  border-radius: var(--border-radius);
+  .button:hover {
+    opacity: 0.7;
+  }
 }
 
-.card_button {
-  
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  
-}
-
-.button:hover {
-  opacity: 0.7;
+@layer component {
+  .card_button {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
 }
 
 .form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-l);
+  margin: 30px;
 
   background-color: var(--color-primary);
   padding: var(--space-l);
@@ -243,11 +272,107 @@ gap: var(--space-m);
 
 }
 
-.form_button {
-  background-color: var(--color-white);
-  width: 100%;
-  max-width: 160px;
-  color: var(--color-text);
-
+@layer main {
+  .form_button {
+    background-color: var(--color-white);
+    width: 100%;
+    max-width: 300px;
+    color: var(--color-text);
+  
+  }
 }
+
+@layer component {
+  .form_button {
+    background-color: rgb(24, 152, 190) ;
+  }
+}
+
+@layer style {
+  .form_button {
+    color: rgb(255, 255, 255);
+    border:1px solid #212529;
+  }
+}
+
+@media all and (max-width:850px) {
+ .blog {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+@media all and (max-width:600px) {
+  .blog {
+   grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    max-width:250px;
+    width: 100%;
+  }
+  .blog {
+    justify-items: center;
+  }
+ }
+
+ /* @media all and (not (min-width: 700px)) {
+  .page_content {
+    background-color: rgb(126, 126, 190);
+  }
+ } */
+
+/* @media all and ( 600px < width <= 800px) {
+  .page_content {
+    background-color: rgb(126, 126, 190);
+  }
+ } */
+
+ @media all and ( 300px < width <= 800px) {
+  .card {
+    border: 3px solid green;
+  }
+  .page_content {
+    background-color: rgb(207, 138, 138);
+  }
+ }
+
+  /* @media all and ( 300px < width <= 800px) {
+  .hero {
+  display: flex;
+  flex-direction: column; 
+  }
+  }   */
+
+ @media all and ( 300px < width <= 680px) {
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form_title{
+    padding: 10px;
+  }
+  .form_info {
+    padding-top: 10px;
+  }
+  .form_content{
+    text-align: center;
+    line-height: 20px;
+    
+  }
+  .form_button {
+    width: 200px;
+    text-align: center;
+  }
+ }
+
+ .hero_container{
+  container-type: inline-size;
+  container-name: hero;
+ }
+
+ @container hero (width < 960px) {
+  .hero {
+    flex-direction: column;
+  }
+ }
 

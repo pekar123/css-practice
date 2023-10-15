@@ -11,12 +11,15 @@
 </header>
 
 {{#with hero}}
-<div class="hero">
-  <div class="hero_content">
-    <h1 class="hero_title">{{title}}</h1>
-    <p class="hero_text">{{text}}</p>
+<div class="hero_container">
+  <div class="hero">
+    <div class="hero_content">
+      <h1 class="hero_title" style="font-family: 'Segment';">{{title}}</h1>
+      <p class="hero_text">{{text}}</p>
+    </div>
+    <img src="{{photo}}" alt="Hero image" class="hero_img">
+    <a class=" button form_button" href="{{href}}">Click</a>
   </div>
-  <img src="{{photo}}" alt="Hero image" class="hero_img">
 </div>
 {{/with}}
 
