@@ -1,0 +1,94 @@
+<header class="header">
+  {{#with header}}
+  <div class="header_nav">
+    <div class="logo">
+      <span>{{brandName}}</span>
+    </div>
+
+    <div class="nav">
+      {{#each links}}
+      <a href="{{url}}" class="nav_text">{{text}}</a>
+      {{/each}}
+    </div>
+  </div>
+
+  {{#with ad}}
+  <div class="header_info">
+    <div class="header_web">
+      <p class="header_icon">Ad </p>
+      <p class="header_web_text">{{text}}: {{url}}</p>
+    </div>
+    {{/with}}
+    <p class="header_web_text">userOnline: {{userOnline}}</p>
+
+  </div>
+
+  {{/with}}
+</header>
+
+
+<main class="main">
+  {{#with hero}}
+  <div class="hero">
+    <h1 class="hero_title">{{title}}</h1>
+    <p class="hero_description">{{description}}</p>
+
+    <div class="hero_button_purple">
+      {{#with button}}
+      <a class="button_purple" href="{{url}}">{{text}}</a>
+      {{/with}}
+    </div>
+
+  </div>
+  {{/with}}
+</main>
+
+{{#with about}}
+<div class="about">
+  <div class="about_title">{{heading}}</div>
+  <div class="about_info">{{info}}</div>
+</div>
+{{/with}}
+
+<div class="articles">
+  <div class="articles_activ">
+    <span class="articles_title">Our Articles</span>
+    <div class="articles_button_style">
+      <a href="#" class="artice_button">View All</a>
+    </div>
+  </div>
+
+  <div class="card_row">
+    {{#each articles}}
+    <div class="card">
+      <img class="card_image" src="{{photo}}" alt="{{name}}">
+      <h4 class="card_title">{{name}}</h4>
+      <p class="card_description">{{description}}</p>
+      <div class="card_button_purple">
+        <a class="card_button" href="#">Real All</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  {{#with footer}}
+  <div class="footer_title">
+
+    <div class="footer_list">
+      {{#each pages}}
+      <a class="footer_item" href="{{path}}">{{name}}</a>
+      {{/each}}
+    </div>
+
+  </div>
+
+  <div>
+    <span class="footer_copyright">{{copyright}}</span>
+  </div>
+  {{/with}}
+
+</footer>
