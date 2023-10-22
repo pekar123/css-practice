@@ -112,12 +112,21 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 30px;
 }
 
 .nav_text {
   text-decoration: none;
   color: #FFF;
+  background-color: transparent;
+  padding: 8px;
+  
+}
+
+.nav_text:hover {
+  background-color: #9CA3AF;
+  padding: 8px;
+  border-radius: 4px;
 }
 
 .header_info {
@@ -229,7 +238,7 @@ body {
 }
 
 .about_title {
-  width: 600px;
+  max-width: 600px;
   
   
   font-size: 24px;
@@ -295,12 +304,14 @@ body {
 .card_row {
   display: flex;
   gap: 32px;
+  flex-wrap: wrap;
   
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  
   gap: 16px;
   justify-content: space-between;
   
